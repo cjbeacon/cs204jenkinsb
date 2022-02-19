@@ -54,7 +54,7 @@ class Calculator {
             n2=n3;
         }
         return n3;
-    }
+    } 
 
 
     /*
