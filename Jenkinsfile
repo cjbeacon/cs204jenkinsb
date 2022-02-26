@@ -80,11 +80,13 @@ pipeline {
     post {
         failure{
             mail to: 'calebj@gmail.com',
-            subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-            body: "Something is wrong with ${env.BUILD_URL}"
+            subject: "Failed Pipeline: filler",
+            body: "Something is wrong with filler"
         }
         success{
-            echo 'This will run only if successful'
+            mail to: 'calebj@gmail.com',
+            subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+            body: "Something is wrong with ${env.BUILD_URL}"
         }
     }
 }
