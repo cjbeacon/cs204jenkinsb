@@ -2,7 +2,7 @@ import java.util.UUID;
 
 // test pipeline on right branch lol
 
-clas s Calculator {
+class Calculator {
 
     Calculator(){
 
