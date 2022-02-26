@@ -79,14 +79,12 @@ pipeline {
 
     post {
         failure{
-            mail bcc: 'calebj@gmail.com',
+            mail to: 'calebj@gmail.com',
             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
             body: "Something is wrong with ${env.BUILD_URL}"
         }
         success{
-            mail bcc: 'calebj@gmail.com',
-            subject: "Failed Pipeline: ",
-            body: "Something is wrong with "
+            echo 'This will run only if successful'
         }
     }
 }
